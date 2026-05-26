@@ -1,5 +1,5 @@
-##📁 RDP Brute Force SOC Investigation
-#🔍 Project Overview
+## RDP Brute Force SOC Investigation
+# 🔍Project Overview
 
 This project is a SOC (Security Operations Center) investigation of a Windows RDP brute force attack using Splunk SIEM logs. The analysis identifies failed authentication attempts, extracts key forensic indicators, and maps the attack to the MITRE ATT&CK framework.
 
