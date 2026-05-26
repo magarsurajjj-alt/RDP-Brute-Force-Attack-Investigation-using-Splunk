@@ -90,7 +90,8 @@ RDP-Bruteforce-SOC-Investigation/
 ├── incident-report.pdf
 ├── logs-analysis.txt
 ├── mitre-mapping.md
-│
+├── Data/
+|   ├──brute_force.csv
 └── screenshots/
     ├── event-id-4625.png
     ├── failed-logins.png
