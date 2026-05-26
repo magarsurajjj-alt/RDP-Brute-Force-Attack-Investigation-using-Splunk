@@ -60,15 +60,12 @@ Type: External attacker network
 Technique ID	Name	Description
 T1110	Brute Force	Repeated password guessing attempts
 T1078	Valid Accounts (Attempted)	Targeting legitimate system account (administrator)
-🚨 Attack Summary
-
-The attacker performed an automated brute force attack against a Windows system using RDP authentication. Multiple failed login attempts were observed against the Administrator account originating from a single external IP address. The rapid request frequency and rotating source ports indicate the use of automated tooling.
-
-📌 Conclusion
-
+## 📌Conclusion
+```
 This incident is a confirmed brute force attack against a Windows host. The attack was automated, external, and targeted privileged credentials. Immediate mitigation would include IP blocking, account lockout policies, and monitoring for similar patterns.
-
-📁 Project Structure
+```
+## 📁Project Structure
+```
 RDP-Bruteforce-SOC-Investigation/
 │
 ├── README.md
@@ -80,7 +77,9 @@ RDP-Bruteforce-SOC-Investigation/
     ├── event-id-4625.png
     ├── failed-logins.png
     ├── splunk-dashboard.png
-🧠 Skills Demonstrated
+```
+## 🧠Skills Demonstrated
+```
 SIEM log analysis (Splunk)
 Windows Event log investigation
 Brute force attack detection
@@ -88,6 +87,8 @@ Regex-based field extraction
 Threat intelligence (IP analysis)
 MITRE ATT&CK mapping
 SOC-style reporting
-🏆 Outcome
-
+```
+# 🏆Outcome
+```
 This project demonstrates real-world SOC analyst capabilities in detecting and analyzing brute force attacks using SIEM tools and security logs.
+```
