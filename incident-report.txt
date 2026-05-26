@@ -1,0 +1,37 @@
+Incident Report: RDP Brute Force Attack Investigation
+Analyst: Suraj Magar
+Date: 26 May 2026
+Tool Used: Splunk SIEM
+
+🔍 1. Executive Summary
+
+A brute force attack was detected targeting a Windows system via RDP authentication. Multiple failed login attempts were observed against the Administrator account originating from a single external IP address. The attack was automated and indicates credential guessing activity.
+
+🎯 2. Incident Overview
+Incident Type: Brute Force Attack
+Attack Vector: RDP / Windows Authentication
+Severity: High
+Status: Confirmed malicious activity
+📊 3. Affected Assets
+Target System: Windows Host (DESKTOP-SV2RBA9)
+User Account Targeted: Administrator
+Authentication Service: NTLM / Logon Type 3
+🌐 4. Attacker Details
+Source IP: 113.161.192.227
+Source Ports: 49735–50077
+Geolocation: Vietnam (approx.)
+❌ 5. Evidence Summary
+Event ID 4625 (Failed Logon)
+3,129+ failed login attempts
+Same username targeted repeatedly
+Rapid sequential authentication attempts
+🧠 6. Conclusion
+
+The activity is confirmed as an automated brute force attack against a Windows RDP service. The attacker attempted to guess the Administrator credentials using repeated authentication attempts.
+
+🛡️ 7. Recommendations
+Block attacker IP (113.161.192.227)
+Enable account lockout policy
+Restrict RDP access via firewall/VPN
+Implement MFA for administrator accounts
+Monitor repeated Event ID 4625 logs
