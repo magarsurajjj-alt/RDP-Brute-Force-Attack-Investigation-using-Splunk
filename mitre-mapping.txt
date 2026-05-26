@@ -1,0 +1,25 @@
+🧠 MITRE ATT&CK Mapping
+🔴 T1110 – Brute Force
+Technique: Brute Force
+Tactic: Credential Access
+Description:
+The attacker performed repeated login attempts to guess valid credentials for the Administrator account.
+🔴 T1078 – Valid Accounts (Attempted)
+Technique: Valid Accounts
+Tactic: Defense Evasion / Persistence
+Description:
+The attacker targeted a legitimate system account (Administrator) attempting unauthorized access.
+📊 Attack Flow Mapping
+Attacker IP: 113.161.192.227
+        ↓
+Repeated login attempts
+        ↓
+Target: Administrator account
+        ↓
+Authentication failure (Event ID 4625)
+        ↓
+Brute force detection
+🧠 MITRE Summary
+Technique ID	Name	Why it applies
+T1110	Brute Force	Password guessing attack
+T1078	Valid Accounts	Targeting real admin account
