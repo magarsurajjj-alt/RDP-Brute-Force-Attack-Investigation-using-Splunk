@@ -1,0 +1,24 @@
+Index: brute
+Sourcetype: csv
+Event ID: 4625
+
+🔎 Step 1: Identify Failed Logins
+index="brute" sourcetype="csv"
+| search "Audit Failure"
+🔎 Step 2: Extract Fields
+index="brute" sourcetype="csv"
+| rex "Account Name:\s+(?<username>\w+)"
+| rex "Source Network Address:\s+(?<src_ip>\d+\.\d+\.\d+\.\d+)"
+| rex "Source Port:\s+(?<src_port>\d+)"
+| rex "Failure Reason:\s+(?<failure_reason>[^\\n]+)"
+| table username src_ip src_port failure_reason
+🔎 Step 3: Attack Pattern Analysis
+index="brute" sourcetype="csv"
+| stats count by src_ip username src_port
+🔎 Step 4: Attack Frequency
+index="brute" sourcetype="csv"
+| timechart count
+🔎 Step 5: IP Geolocation
+index="brute" sourcetype="csv"
+| rex "Source Network Address:\s+(?<src_ip>\d+\.\d+\.\d+\.\d+)"
+| iplocation src_ip
