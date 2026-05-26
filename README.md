@@ -3,6 +3,11 @@
 ```
 This project is a SOC (Security Operations Center) investigation of a Windows RDP brute force attack using Splunk SIEM logs. The analysis identifies failed authentication attempts, extracts key forensic indicators, and maps the attack to the MITRE ATT&CK framework.
 ```
+## Screenshot of Dashboard
+<img width="1351" height="767" alt="Dashboard for rdp" src="https://github.com/user-attachments/assets/a1fbd3b4-151c-4557-a13e-2cf40768bb3d" />
+
+
+
 ## 🎯Objective
 ```
 Analyze Windows Security logs (Event ID 4625)
