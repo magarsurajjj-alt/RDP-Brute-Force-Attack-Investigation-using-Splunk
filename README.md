@@ -1,27 +1,34 @@
 ## RDP Brute Force SOC Investigation
 # 🔍Project Overview
-
+```
 This project is a SOC (Security Operations Center) investigation of a Windows RDP brute force attack using Splunk SIEM logs. The analysis identifies failed authentication attempts, extracts key forensic indicators, and maps the attack to the MITRE ATT&CK framework.
-
-🎯 Objective
+```
+## 🎯Objective
+```
 Analyze Windows Security logs (Event ID 4625)
 Identify brute force attack patterns
 Extract attacker and victim details
 Determine attack behavior and timeline
 Map findings to MITRE ATT&CK framework
 Produce SOC-style incident report
-🛠️ Tools Used
+```
+## 🛠️Tools Used
+```
 Splunk SIEM
 Windows Security Event Logs
 Regex (rex) for field extraction
 IP Geolocation (iplocation)
 MITRE ATT&CK Framework
-📂 Dataset Information
+```
+## 📂Dataset Information
+```
 Source: BTLO Brute Force Challenge logs
 Log Type: Windows Authentication Logs
 Event ID Used: 4625 (Logon Failure)
 Format: CSV ingested into Splunk
-🔎 Investigation Process
+```
+## 🔎Investigation Process
+```
 Step 1: Identify Failed Logins
 
 Filtered authentication failures using Windows Event ID 4625.
@@ -42,8 +49,9 @@ Changing source ports (automation behavior)
 Step 4: Threat Confirmation
 
 Confirmed a brute force attack targeting the Windows Administrator account.
-
-📊 Key Findings
+```
+## 📊Key Findings
+```
 Field	Value
 Total Failed Attempts	3,129+
 Targeted User	administrator
@@ -52,14 +60,19 @@ Source IP	113.161.192.227
 Failure Reason	Unknown username or bad password
 Source Ports	49735 – 50077
 Attack Type	RDP Brute Force
-🌍 Geolocation (Threat Intelligence)
+```
+## 🌍Geolocation (Threat Intelligence)
+```
 Source IP: 113.161.192.227
 Country: Vietnam (approx.)
 Type: External attacker network
-🧠 MITRE ATT&CK Mapping
+```
+## 🧠MITRE ATT&CK Mapping
+```
 Technique ID	Name	Description
 T1110	Brute Force	Repeated password guessing attempts
 T1078	Valid Accounts (Attempted)	Targeting legitimate system account (administrator)
+```
 ## 📌Conclusion
 ```
 This incident is a confirmed brute force attack against a Windows host. The attack was automated, external, and targeted privileged credentials. Immediate mitigation would include IP blocking, account lockout policies, and monitoring for similar patterns.
@@ -91,4 +104,4 @@ SOC-style reporting
 # 🏆Outcome
 ```
 This project demonstrates real-world SOC analyst capabilities in detecting and analyzing brute force attacks using SIEM tools and security logs.
-```
+
